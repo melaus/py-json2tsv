@@ -14,6 +14,6 @@ This code is written and tested on a Mac. It should work on Linux systems but fu
     - '``-k``', '``--main-key'``   : Highest-level key for access the list of records required
 
 # Example Usage
-- ```python
+```python
 python json2tsv.py -i 'test.json' -I '/Users/melaus/repo/personal/py-json2tsv' -o 'test_output.tsv'
 ```
