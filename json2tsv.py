@@ -54,16 +54,13 @@ def create_records(key_set, items_list):
         for key in key_set:
             # the value of the given key
             val = record.get(key)
-            print val
             
             # process value depending on types
             if val:
                 # format list
                 if type(val) == list:
-                    print "val is list"
                     # format list of dicts
                     if type(val[0]) == dict:
-                        print "val is dict"
                         # keys and values from dictionary/ies
                         tups = [[(k,str(v))for k, v in sub_item.iteritems()] for sub_item in val]
                         # joins tuples keys and values with :
@@ -73,12 +70,9 @@ def create_records(key_set, items_list):
                         row += results
                     # format list of strings
                     else:
-                        print "val is list but not dict"
                         row += ['|'.join(map(lambda elm: str(elm), val))]
-                        print row
                 # format everything that is not a list
                 else:
-                    print "val is something else"
                     row += [str(val)]
             else:
                 row += ['']
